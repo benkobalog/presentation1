@@ -68,7 +68,9 @@ ENTRYPOINT java -Xms100m -Xmx100m -jar /root/app.jar
 
 * Data created after a container has been launched will be lost if the container is deleted
 * Persisted data should be stored elsewhere - DB, S3, volumes etc.
-* Containers should be "stateless"
+* Containers should be 
+"stateless"
+* "Starting data" is not visible from the host OS. (But you can copy it with _docker cp_)
 
 ## Network
 
