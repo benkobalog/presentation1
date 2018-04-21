@@ -1,12 +1,12 @@
 # Docker
 
+![docker](https://techglimpse.com/wp-content/uploads/2016/03/Container-vs-VMs.jpg)
+
 ## Basic concepts
 * Image
 * Container
 * Volume
 * Registry
-
-![docker](https://techglimpse.com/wp-content/uploads/2016/03/Container-vs-VMs.jpg)
 
 #### Container
 * A container is an instance of an image that can start, pause, stop
