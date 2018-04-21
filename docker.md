@@ -3,8 +3,9 @@
 ![docker](https://techglimpse.com/wp-content/uploads/2016/03/Container-vs-VMs.jpg)
 
 ## Basic concepts
-* Image
 * Container
+* Image
+* Dockerfile
 * Volume
 * Registry
 
@@ -29,7 +30,12 @@ docker exec -it <container name> bash # if bash is installed in the container yo
     * Images stored on the machines can share layers, which can save disk space
     * Layers are not rebuild unless you add "--no-cache" to the build command
 
-Example Dockerfile:
+```bash
+docker build -t <image name> .
+docker rmi <image name>
+```
+
+#### Dockerfile
 
 ```docker
 FROM openjdk:8-jre
@@ -40,11 +46,8 @@ RUN echo "you can run commands here which run during the build phase"
 
 ENTRYPOINT java -Xms100m -Xmx100m -jar /root/app.jar
 ```
-
-```bash
-docker build -t <image name> .
-docker rmi <image name>
-```
+* Images are built from Dockerfiles
+* Each command ('RUN', 'COPY', etc.) represents a layer
 
 #### Registry
 * "Repo" for images
