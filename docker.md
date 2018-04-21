@@ -22,6 +22,7 @@ docker exec -it <container name> bash # if bash is installed in the container yo
 ```
 * Uses the same kernel as the host OS, but you can run any linux distro, regardless of the host OS
 * Processes inside the container are separate from the host
+* Environment variables can be passed to containers at creation
 
 #### Image
 * Images are read-only definitions used to create a container (they describe the content of a container, starting with a base image, at the very least a base Linux OS)
