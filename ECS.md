@@ -25,7 +25,7 @@ A __task__ is a description of how a container should be started. Think of it li
 * Region Specific
 * IAM policy is the same in the same cluster
 * Auto scale EC2's
-
+* ECR for storing docker images
 
 # How to manage ECS
 * Web UI
