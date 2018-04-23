@@ -69,13 +69,14 @@ ENTRYPOINT java -Xms100m -Xmx100m -jar /root/app.jar
 
 * Data created after a container has been launched will be lost if the container is deleted
 * Persisted data should be stored elsewhere - DB, S3, volumes etc.
-* Containers should be "stateless"
+* Containers should be able to continue computations where the previous killed instance left off
 * "Starting data" is not visible from the host OS. (But you can copy it with _docker cp_)
 
 ## Network
 
 * Outgoing traffic has the same limitations as the host machine
-* Incoming traffic is closed by default
-    * all ports are closed
-    * ports can be opened with -p switch
-* Containers can have separate IP addresses
+* Containers connect to a virtual network 
+    * There's a default network 
+    * You can create new ones and connect containers to them
+    * Containers within the same virtual network can see each other
+    * If you want to map ports to the host machine's IP you can use the -p switch
